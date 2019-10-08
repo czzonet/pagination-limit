@@ -7,9 +7,9 @@ const LIMIT = 5
  * @returns 最大分页
  */
 const pageLimit = (count: number) => {
-  /** 处理负数 设为0 */
-  let c = count >= 0 ? count : 0
-  return Math.floor((c - 1) / LIMIT) + 1
+  let t = Math.floor((count - 1) / LIMIT) + 1
+  /** 分页最小设为1 */
+  return t >= 1 ? t : 1
 }
 
 /**
